@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.padsolver.MainActivity" >
+    
+    <Button
+        android:id="@+id/buttonLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Load Screenshot" />
+
+    <Button
+        android:id="@+id/buttonCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonLoadNewest"
+        android:layout_below="@+id/buttonLoadNewest"
+        android:text="Calc" />
+
+
+    <Button
+        android:id="@+id/buttonShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonCalc"
+        android:layout_alignBottom="@+id/buttonCalc"
+        android:layout_toRightOf="@+id/buttonCalc"
+        android:text="Show" />
+
+    <Button
+        android:id="@+id/buttonHide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonShow"
+        android:layout_alignBottom="@+id/buttonShow"
+        android:layout_toRightOf="@+id/buttonShow"
+        android:text="Hide" />
+
+    <TextView
+        android:id="@+id/textViewCols"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonCalc"
+        android:layout_marginTop="16dp"
+        android:text="Cols =    " />
+
+    <EditText
+        android:id="@+id/editTextCols"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewCols"
+        android:layout_alignBottom="@+id/textViewCols"
+        android:layout_toRightOf="@+id/textViewCols"
+        android:ems="10"
+        android:inputType="number"
+        android:text="6" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewRows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textViewCols"
+        android:layout_below="@+id/editTextCols"
+        android:text="Rows =    " />
+
+    <EditText
+        android:id="@+id/editTextRows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewRows"
+        android:layout_alignBottom="@+id/textViewRows"
+        android:layout_toRightOf="@+id/textViewRows"
+        android:ems="10"
+        android:inputType="number"
+        android:text="5" />
+    
+    <TextView
+        android:id="@+id/textViewMaxLen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextRows"
+        android:text="Max Length (less than 50) = " />
+
+    <EditText
+        android:id="@+id/editTextMaxLen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewMaxLen"
+        android:layout_alignBottom="@+id/textViewMaxLen"
+        android:layout_toRightOf="@+id/textViewMaxLen"
+        android:ems="10"
+        android:inputType="number"
+        android:text="20" />
+
+    <TextView
+        android:id="@+id/textViewGroupSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewMaxLen"
+        android:layout_below="@+id/editTextMaxLen"
+        android:text="Group Size = " />
+
+    <EditText
+        android:id="@+id/editTextGroupSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewGroupSize"
+        android:layout_alignBottom="@+id/textViewGroupSize"
+        android:layout_toRightOf="@+id/textViewGroupSize"
+        android:ems="10"
+        android:inputType="number" 
+        android:text="1000" />
+
+    <TextView
+        android:id="@+id/textViewIteration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewGroupSize"
+        android:layout_below="@+id/editTextGroupSize"
+        android:text="Iteration = " />
+
+    <EditText
+        android:id="@+id/editTextIteration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewIteration"
+        android:layout_alignBottom="@+id/textViewIteration"
+        android:layout_toRightOf="@+id/textViewIteration"
+        android:ems="10"
+        android:inputType="number"
+        android:text="50" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewIteration"
+        android:layout_below="@+id/editTextIteration"
+        android:text="Result :" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewMode"
+        android:layout_below="@+id/textViewMode"
+        android:src="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/buttonLoadNewest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonLoad"
+        android:layout_below="@+id/buttonLoad"
+        android:text="Load Newest" />
+
+    <TextView
+        android:id="@+id/textViewMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewResult"
+        android:layout_below="@+id/textViewResult"
+        android:text="Mode = " />
+
+    <EditText
+        android:id="@+id/editTextMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewMode"
+        android:layout_alignBottom="@+id/textViewMode"
+        android:layout_toRightOf="@+id/textViewMode"
+        android:layout_alignLeft="@+id/editTextMode"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0" />
+
+</RelativeLayout>
